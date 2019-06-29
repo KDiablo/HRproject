@@ -1,0 +1,209 @@
+﻿@model HrGetJob.Models.Applicant
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Applicant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobPosting.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobPosting.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BestWay2contact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BestWay2contact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkedIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkedIn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubmittedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubmittedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhenArchived)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhenArchived)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emailed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emailed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhenEmailed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhenEmailed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhoEmailed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhoEmailed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobFairAttended)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobFairAttended)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

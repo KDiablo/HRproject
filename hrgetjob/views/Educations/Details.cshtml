@@ -1,0 +1,107 @@
+﻿@model HrGetJob.Models.Education
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Education</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SchoolName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SchoolName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Graduate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Graduate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Degree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Degree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EdID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,67 @@
+﻿@model HrGetJob.Models.JobPosting
+
+@{
+    ViewBag.Title = "ViewPost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 marg50">
+            <div class="promo-block">
+                <div class="promo-text text-center">@ViewBag.JobTitle</div>
+                <div class="center-line text-center"></div>
+                <p class="promo-paragraph text-center"> @ViewBag.BranchName</p>
+                <p class="promo-paragraph text-center">@Html.DisplayFor(model => model.JobPostingID)</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-10">
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Job.Description)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Job.Description)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Job.PreferredSkills)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Job.PreferredSkills)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Job.EoeMessage)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Job.EoeMessage)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-lg-2"></div>
+            <p class="marg50 text-right">
+                @Html.ActionLink("Apply", "Create", "Applicants", new { id = Model.JobPostingID }, new { @class = "btn-lg btn-success" })
+            </p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

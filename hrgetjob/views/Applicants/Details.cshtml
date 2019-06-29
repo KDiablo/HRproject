@@ -1,0 +1,203 @@
+﻿@model HrGetJob.Models.Applicant
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Applicant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobPosting.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobPosting.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bestWay2contact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bestWay2contact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkedIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkedIn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubmittedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubmittedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhenArchived)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhenArchived)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emailed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emailed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhenEmailed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhenEmailed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhoEmailed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhoEmailed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobFairAttended)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobFairAttended)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AppID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,118 @@
+﻿@model IEnumerable<HrGetJob.Models.JobPosting>
+@{
+    ViewBag.Title = "Job Openings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--#region carousel-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div style="padding:120px 0;">
+                <div id="thumbnail-slider">
+                    <div class="inner">
+                        <ul>
+                            <li>
+                                <a class="thumb" href="~/Images/brick.jpg"></a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="~/Images/brown.jpg"></a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="~/Images/cabin.jpg"></a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="~/Images/four.jpg"></a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="~/Images/inside.jpg"></a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="~/Images/large.jpg"></a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="~/Images/lights.jpg"></a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="~/Images/one.jpg"></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end-->
+        </div>
+    </div>
+</div>
+<!--#endregion-->
+<!--#region About & Map-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6" id="about">
+            <div class="promo-block">
+                <div class="promo-text">About Company</div>
+                <div class="center-line"></div>
+            </div>
+            <div class="text-center marg50">
+                <p class="about-text"><span class="first-letter">P</span>hasellus vitae ultrices lectus, eget posuere est. In non mi ipsum. Suspendisse velit ticol sodales, viverra lorem vitae, accumsan orci. Mauris nec ipsum tempus, laorei lorem vel, sodales ante. Praesent quis interdum sapien, et pulvinar leo. Vivamus mattis fermentum eros vel ullamcorper. Integer egestas metus vitae mi molestie, ac euismod quam vestibulum. Pellentesque ac molestie eros. Praesent at nunc vel est tempor aliqua.</p>
+                <ul class="list-check">
+                    <li><i class="icon-ok"></i>Clean And Minimal Design</li>
+                    <li><i class="icon-ok"></i>We Love Our Clients</li>
+                    <li><i class="icon-ok"></i>Powerful & Flexible Settings</li>
+                    <li><i class="icon-ok"></i>Online Premium Support</li>
+                </ul>
+            </div>
+        </div>
+        <!--end about-->
+        <!--begin map-->
+        <div class="col-lg-6" id="location">
+            <div class="promo-block">
+                <div class="promo-text">Where to Find Us?</div>
+                <div class="center-line"></div>
+            </div>
+            <div class="text-center marg50">
+                <iframe width="500" height="300" scrolling="yes" marginheight="0" marginwidth="0" src="http://maps.google.ru/?ie=UTF8&amp;ll=42.376467,-71.063175&amp;spn=0.006967,0.016512&amp;t=m&amp;z=17&amp;output=embed"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#endregion-->
+<!--#region jobs-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 marg75">
+            <div class="promo-block">
+                <div class="promo-text">Current Job Openings</div>
+                <div class="center-line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="marg25 text-center">
+                <div id="careers">
+                    @foreach (var item in Model)
+                    {
+                        <div class="about-desc">
+                            @Html.DisplayFor(modelitem => item.Branch.BranchName, "Branch Name:")
+                        </div>
+                        <div class="about-text">
+                            @Html.ActionLink(item.Job.JobTitle, "ViewPost", new { id = item.JobPostingID })
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--#endregion-->
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
